@@ -8,7 +8,7 @@ const m = 10;
 const sc = 70;
 
 function preload() {
-  song = loadSound("house_in_a_forest.mp3");
+  song = loadSound("sound_assets/house_in_a_forest.mp3");
 }
 function setup() {
   createCanvas(256, 256);

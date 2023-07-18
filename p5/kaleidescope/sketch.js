@@ -15,8 +15,8 @@ let d = 3;
 let k = n / d;
 
 function preload() {
-  //song = loadSound("house_in_a_forest.mp3");
-  song = loadSound("bright.m4a");
+  //song = loadSound("sound_assets/house_in_a_forest.mp3");
+  song = loadSound("sound_assets/bright.m4a");
 }
 
 function setup() {
