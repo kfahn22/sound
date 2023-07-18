@@ -13,7 +13,7 @@ let analyser;
 
 container.addEventListener("click", function () {
   const audio1 = document.getElementById("audio1");
-  audio1.src = "music_assets/House In A Forest Loop.mp3";
+  audio1.src = "path.wav";
   const audioCtx = new AudioContext();
   audio1.play();
   audioSource = audioCtx.createMediaElementSource(audio1);

@@ -1,3 +1,10 @@
+// "Trouble Makers" by Matthew Pablo CC BY-3.0
+// http://www.matthewpablo.com
+// http://www.youtube.com/user/letspretendxc0re
+
+// Music by syncopika CC BY-3.0
+// https://opengameart.org/content/happy-bgm-090719
+
 let song;
 let amp;
 
@@ -15,8 +22,8 @@ let d = 3;
 let k = n / d;
 
 function preload() {
-  //song = loadSound("sound_assets/house_in_a_forest.mp3");
-  song = loadSound("sound_assets/bright.m4a");
+  song = loadSound("happy.wav");
+  // song = loadSound("bright.m4a");
 }
 
 function setup() {
