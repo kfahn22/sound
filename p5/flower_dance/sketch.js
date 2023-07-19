@@ -1,7 +1,7 @@
 // Code base from Daniel Shiffman
 
-// Music by syncopika CC BY-3.0
-// https://opengameart.org/content/happy-bgm-090719
+// Music by Snabisch CC BY-3.0
+// https://opengameart.org/content/sea-star
 
 let song;
 let amp;
@@ -15,7 +15,7 @@ let c;
 const sc = 80;
 
 function preload() {
-  song = loadSound("happy.wav");
+  song = loadSound("seastar.mp3");
 }
 
 function setup() {
@@ -23,6 +23,7 @@ function setup() {
   angleMode(DEGREES);
   rectMode(CENTER);
   colorMode(HSL);
+
   button = createButton("toggle");
   button.mousePressed(toggleSong);
   song.play();
@@ -52,7 +53,7 @@ function draw() {
   for (let i = 0; i < sl; i++) {
     angle = map(i, 0, sl, 0, 360);
     let amp = spectrum[i];
-    let sc = map(amp, 0, 256, 90, 350);
+    let sc = map(amp, 0, 256, 90, 300);
     let l = map(amp, 0, 256, 20, 90);
     //let h = map(amp, 0, 256, 0, 60);  //orange and yellow
     let h = map(amp, 0, 256, 220, 360);
@@ -71,13 +72,16 @@ function draw() {
     push();
     for (let j = 0; j < 360; j += 45) {
       rotate(j);
-      ellipse(0, 0, x, y);
+      //ellipse(0, 0, x, y);
+      line(0, 0, x, y);
+      rect(0, 0, x, y, 10, 10, 10, 10);
       drawShape(x, y, r, inset, n);
     }
     pop();
   }
+
+  // Add center
   push();
-  //translate(width/2, height/2);
   stroke(310, 100, 70, 80);
   strokeWeight(2);
   drawShape(0, 0, 4, 4, 8);
@@ -116,6 +120,7 @@ function drawShape2(x, y, radius, inset, n) {
   endShape();
   pop();
 }
+
 function drawShape3(x, y, radius, inset, n) {
   //strokeWeight(1);
   push();
