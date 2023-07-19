@@ -53,11 +53,11 @@ function draw() {
     let l = map(amp, 0, 256, 20, 90);
     //let h = map(amp, 0, 256, 0, 60);  //orange and yellow
     let h = map(amp, 0, 256, 230, 360);
-    let size = map(amp, 0, 256, 0, 6);
+    let size = map(amp, 0, 256, 0, 3);
     let x = sc * a * cos(angle);
     let y = sc * b * sin(angle);
     c = color(h, 100, l, 10);
-    stroke(h, 100, l, 10);
+   stroke(h, 100, l, 10);
 
     // create kaleidescope effect
     push();
@@ -65,7 +65,7 @@ function draw() {
       rotate(j);
       // rect(0, 0, x, y, 10, 10, 10, 10);
       // rect(x, y, size, size, 20, 20, 20, 20);
-      drawShape(x, y, 5, 4, 7);
+      drawShape(x, y, size, 5, size);
     }
     pop();
   }
@@ -74,34 +74,40 @@ function draw() {
 }
 
 function drawShape(x, y, radius, inset, n) {
-  strokeWeight(1);
+  strokeWeight(2);
+  noFill();
   //stroke(255);
   push();
   translate(x, y);
   beginShape();
-
+  vertex(0, inset * radius);
   for (i = 0; i < n; i++) {
     //push();
-    rotate(180 / n);
-    line(0, 0 - inset * radius, -radius * inset, 0);
-    // pop();
-    rotate(180 / n);
-    line(-radius * inset, 0, 0, 0 - radius * inset);
+    rotate(PI / n);
+    bezierVertex(width, inset*radius, inset*radius, height/2, 0, inset * radius);
+    // // pop();
+    // rotate(PI / n);
+    // line(-radius * inset, 0, 0, 0 - radius * inset);
   }
   endShape();
   pop();
 }
 
-function drawShape2(x, y, radius, inset, n) {
-  strokeWeight(1);
+function drawSeed(x, y, radius, inset, n) {
+  strokeWeight(2);
+  noFill();
+  //stroke(255);
   push();
   translate(x, y);
   beginShape();
+  vertex(0, 0 - inset * radius);
   for (i = 0; i < n; i++) {
-    rotate(180 / n);
-    line(0, 0 - radius, -radius * inset, 0);
-    rotate(180 / n);
-    line(0, 0, 0 - radius, -radius * inset, 0);
+    //push();
+    rotate(PI / n);
+    bezierVertex(-radius * inset, 0, 0, radius, 0, -radius * inset);
+    // // pop();
+    // rotate(PI / n);
+    // line(-radius * inset, 0, 0, 0 - radius * inset);
   }
   endShape();
   pop();

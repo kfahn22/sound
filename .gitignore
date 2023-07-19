@@ -3,7 +3,16 @@ vanilla-js/music_assets
 vanilla-js/audio/path.wav
 p5/kaleidescope/bright.m4a
 p5/kaleidescope/path.wav
-p5/kaleidescope/p5.sound.js
 p5/kaleidescope2/p5.sound.js
 p5/kaleidescope/happy.wav
 p5/kaleidescope2/Trouble-Makers.mp3
+p5/custom-shapes/p5.polar.js
+p5/custom-shapes/p5.sound.js
+p5/custom-shapes/happy.wav
+p5/kaleidescope2/happy.wav
+p5/flower_dance/happy.wav
+p5/flower_dance/p5.sound.js
+p5/kaleidescope/p5.sound.js
+p5/kaleidescope2/happy.wav
+
+p5/custom-shapes
