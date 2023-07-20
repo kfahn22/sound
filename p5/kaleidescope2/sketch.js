@@ -53,19 +53,20 @@ function draw() {
     let l = map(amp, 0, 256, 20, 90);
     //let h = map(amp, 0, 256, 0, 60);  //orange and yellow
     let h = map(amp, 0, 256, 230, 360);
-    let size = map(amp, 0, 256, 0, 6);
+    let size = map(amp, 0, 256, 2, 5);
+    let alpha = map(amp, 0, 257, 1.0, 0.5);
     let x = sc * a * cos(angle);
     let y = sc * b * sin(angle);
-    c = color(h, 100, l, 10);
-    stroke(h, 100, l, 10);
+    let sw = 2 * (1 - i / spectrum.length);
+    strokeWeight(sw);
+    stroke(h, 100, l, alpha);
 
     // create kaleidescope effect
     push();
     for (let j = 0; j < 360; j += 45) {
       rotate(j);
-      // rect(0, 0, x, y, 10, 10, 10, 10);
-      // rect(x, y, size, size, 20, 20, 20, 20);
-      drawShape(x, y, 5, 4, 7);
+      //line(0,0, x, y);
+      drawShape(x, y, size, size - 1, 9);
     }
     pop();
   }

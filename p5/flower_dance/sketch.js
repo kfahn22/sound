@@ -60,7 +60,7 @@ function draw() {
     let r = map(amp, 0, 256, 3, 5);
     let inset = map(amp, 0, 256, 1, 2);
     let n = map(amp, 0, 256, 7, 9);
-    let alpha = map(amp, 0, 256, 10, 90);
+    let alpha = map(amp, 0, 256, 0.1, 0.6);
     let x = sc * a * cos(angle);
     let y = sc * b * sin(angle);
     c = color(h, 100, l, alpha);
