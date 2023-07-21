@@ -45,7 +45,13 @@ function draw() {
   let bands = fft.getOctaveBands(1, 15.625);
   let spectrum = fft.logAverages(bands);
   //let spectrum = fft.analyze();
+  //let wave = fft.waveform(bn);
 
+  // // predefined frequency ranges ("bass", "lowMid", "mid", "highMid", "treble")
+  // let bass = fft.getEnergy("bass");
+  // let lowMid = fft.getEnergy("lowMid");
+  // let treble = fft.getEnergy("treble");
+  
   translate(width / 2, height / 2);
   rotate(ang);
   let sl = spectrum.length; //12
