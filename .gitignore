@@ -13,6 +13,7 @@ p5/kaleidescope2/happy.wav
 p5/flower_dance/happy.wav
 p5/flower_dance/seastar.mp3
 p5/flower_dance/p5.sound.js
+p5/flower_dance copy
 p5/kaleidescope/p5.sound.js
 p5/kaleidescope2/happy.wav
 
@@ -41,5 +42,15 @@ p5/pulse/happy.wav
 
 p5/arc copy
 p5/house-in-the-woods
+
+p5/wave copy
+
+p5/particle-sketches
+
+generic-object/happy.wav
+generic-object/p5.sound.js
+generic-object/seastar.mp3
+
+p5/coding_train
 
 assets

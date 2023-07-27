@@ -5,7 +5,7 @@
 
 let song;
 let amp;
-
+let flowers = [];
 let button;
 let angle = 0;
 let ang = 0;
@@ -75,17 +75,22 @@ function draw() {
       //ellipse(0, 0, x, y);
       line(0, 0, x, y);
       rect(0, 0, x, y, 10, 10, 10, 10);
-      drawShape(x, y, r, inset, n);
+      flowers.push(x, y);
+      //drawShape(x, y, r, inset, n);
     }
     pop();
   }
-
-  // Add center
-  push();
-  stroke(310, 100, 70, 80);
-  strokeWeight(2);
-  drawShape(0, 0, 4, 4, 8);
-  pop();
+  for (let i = 0; i < flowers.length; i++) {
+    flowers[i].addPoints();
+    flowers[i].reduceDenominator();
+    flowers[i].show();
+  }
+  // // Add center
+  // push();
+  // stroke(310, 100, 70, 80);
+  // strokeWeight(2);
+  // drawShape(0, 0, 4, 4, 8);
+  // pop();
   ang += 1;
 }
 
